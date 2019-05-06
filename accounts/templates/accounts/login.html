@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="'col-6">
+        <div class="alert alert-primary" role="alert">
+            Please enter your login information. </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="login" class = 'btn btn-outline-primary'>
+        </form>
+    </div>
+    <div class="col"></div>
+
+</div>
+{% endblock %}

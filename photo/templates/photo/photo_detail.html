@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block title %}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col"></div>
+    <div class="col-12 col-xl-4 col-md-4">
+        <div class="card" style="">
+            <img src=" {{ object.image.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+
+                <h5 class="card-title">{{ object.author }}</h5>
+                <p class="card-text"> {{ object.text }} </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                        <a href="{% url 'photo:like' object.id %}" class="float-left btn-like {%if user in object.like.all %} active {%endif%}">좋아요!</a>
+                        {% if object.like.all.count %}
+                        <span class = "float-left">
+                            {{object.like.all.count}}
+                        </span>
+                        {% endif %}
+                        <a href="{% url 'photo:favorite' object.id %}" class="float-right btn-favorite {%if user in object.favorite.all %} active {%endif%}">저장하기!</a>
+                    </li>
+                <li class="list-group-item">생성일 : {{ object.created }}</li>
+                <li class="list-group-item">
+
+                    {% load disqus_tags %}
+                    <div class="card-body">
+                        {% disqus_show_comments %}
+                    </div>
+                </li>
+            </ul>
+            <div class="card-body">
+                <a href="{% url 'photo:update' object.id %}" class="card-link">수정하기</a>
+                <a href="{% url 'photo:delete' object.id %}" class="card-link">삭제하기</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col"></div>
+</div>
+{% endblock %}

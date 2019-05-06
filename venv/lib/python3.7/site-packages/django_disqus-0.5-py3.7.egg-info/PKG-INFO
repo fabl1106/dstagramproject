@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: django-disqus
+Version: 0.5
+Summary: Export comments and integrate DISQUS into your Django website
+Home-page: http://arthurk.github.com/django-disqus/
+Author: Arthur Koziel
+Author-email: arthur@arthurkoziel.com
+License: New BSD License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
